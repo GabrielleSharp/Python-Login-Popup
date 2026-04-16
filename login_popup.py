@@ -3,8 +3,8 @@ from tkinter import messagebox
 from tkinter import simpledialog
 import random
 
-stored_username="AdminKev1n"
-stored_password="97531leuveueu"
+stored_username="Admin"
+stored_password="97531PW!"
 
 
 def validate_password(new_pwd):
