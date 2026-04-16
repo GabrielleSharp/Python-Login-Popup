@@ -1,7 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
 from tkinter import simpledialog
-import random
 
 stored_username="Admin37"
 stored_password="97531PW!"
