@@ -1,0 +1,48 @@
+stored_username="GABBI"
+stored_password="1234ohmygod"
+
+while True:
+    username=input("Enter your username: ")
+    password=input("Enter your password: ")
+
+    if username == stored_username and password == stored_password:
+        print(f"ACCESS GRANTED. WELCOME BACK {username}.")
+        break
+    elif username == stored_username and password != stored_password:
+        print(f"ACCESS DENIED. YOUR PASSWORD IS INCORRECT")
+        reset_pwd=input("Reset your password? ")
+        if reset_pwd == "Yes" or reset_pwd== "yes":
+            reset_password=input("Enter new password: ")
+            if len(reset_password)>7:
+                stored_password=reset_password
+                print("Password Reset!")
+                
+                username=input("Enter your username: ")
+                password=input("Enter your password: ")
+
+                if username == stored_username and password == stored_password:
+                    print(f"ACCESS GRANTED. WELCOME BACK {username}.")
+                    break
+                else:
+                    print("ACCESS DENIED. DOUBLE CHECK YOUR USERNAME AND PASSWORD AND TRY AGAIN.")
+    elif username != stored_username and password == stored_password:
+        print("ACCESS DENIED. YOUR USERNAME IS INCORRECT.")
+        reset_usn=input("Reset your username? ")
+        if reset_usn== "Yes" or reset_usn== "yes":
+            reset_username=input("Enter new username: ")
+            if len(reset_username)>5:
+              stored_username=reset_username
+              print("Username Reset!")
+                
+              username=input("Enter your username: ")
+              password=input("Enter your password: ")
+
+              if username == stored_username and password == stored_password:
+                    print(f"ACCESS GRANTED. WELCOME BACK {username}.")
+                    break
+              else:
+                    print("ACCESS DENIED. DOUBLE CHECK YOUR USERNAME AND PASSWORD AND TRY AGAIN.")
+        
+        
+    else:
+        print("ACCESS DENIED. DOUBLE CHECK YOUR USERNAME AND PASSWORD AND TRY AGAIN.")
